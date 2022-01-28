@@ -1,0 +1,159 @@
+:root {
+  --bg-color: #00af91;
+  --bg-text: #ffcc29;
+  --border-text: #007965;
+  --border-color: #f58634;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.header-container {
+  background-color: var(--border-color);
+  color: var(--border-text);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.header-heading {
+  font-size: 200%;
+  letter-spacing: 10px;
+}
+
+.startgame-container {
+  padding: 10% 7% 20% 7%;
+  display: flex;
+  flex-direction: column;
+}
+.startgame-inputs,
+.startgame-submits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.playerinput {
+  padding: 10px;
+  margin: 5% 5%;
+  width: 25%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--bg-text);
+  font-size: 125%;
+  color: white;
+}
+.playerinput::placeholder {
+  color: #ffffff;
+}
+.vs {
+  font-size: 150%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 20px;
+}
+.playerinput:focus {
+  outline: none;
+}
+
+.startgamebutton {
+  padding: 5px 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px #f58634;
+}
+@media (max-width: 800px) {
+  .startgame-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .playerinput {
+    padding: 10px;
+    margin: 5% 5%;
+    width: 65%;
+  }
+}
+
+.playground-player {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 15px 20px;
+}
+.gamerule-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.playground-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gameboard-container {
+  width: 80%;
+  padding: 5%;
+}
+.game-board {
+  display: grid;
+  height: 60vh;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 33% 33% 33%;
+}
+.box {
+  background: var(--border-color);
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 250%;
+}
+.box:hover {
+  background-color: var(--border-text);
+}
+
+.rule-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5% 10%;
+  flex-direction: column;
+  width: 80%;
+}
+.rule-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 10px;
+  font-size: 125%;
+  text-transform: capitalize;
+}
+
+.winner-container {
+  inset: 0 0 0 0;
+  padding: 10% 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./../assets/images/celebration.gif');
+}
+.winner {
+  margin: 10% 0 2% 0;
+  letter-spacing: 10px;
+  color: #ffffff;
+}
+.restart-button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 10px 10px 20px#ffcc29;
+}
